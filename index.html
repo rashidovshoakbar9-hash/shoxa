@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone — Kompyuter va noutbuklar</title>
+    <link rel="stylesheet" href="./shoxa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo"><span>TECH</span>ZONE<span class="dot">.</span></a>
+
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#products">Mahsulotlar</a>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#contact">Aloqa</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+        🛒 Savat <span id="cartCount">0</span>
+    </button>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">✦ TEXNOLOGIYALAR OLAMIGA XUSH KELIBSIZ</span>
+            <h1>Kelajak texnologiyasi <span>shu yerdan boshlanadi.</span></h1>
+            <p>
+                Eng zamonaviy kompyuterlar va noutbuklar.
+                Sifatli qurilmalar, ajoyib tanlov va hamyonbop narxlar!
+            </p>
+            <a href="#products" class="primary-button">Mahsulotlarni ko‘rish →</a>
+
+            <div class="hero-stats">
+                <div><strong>20+</strong><small>Mahsulot modeli</small></div>
+                <div><strong>2 xil</strong><small>Qurilma turi</small></div>
+                <div><strong>100%</strong><small>Tanlov sizniki</small></div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="glow"></div>
+            <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=85"
+                alt="Zamonaviy noutbuk">
+            <div class="floating-card">
+                <span>⚡</span>
+                <div><strong>Yangi texnologiyalar</strong><small>O‘zingizga mosini tanlang</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">BIZNING KATALOG</span>
+                <h2>Mahsulotlar <span>to‘plami</span></h2>
+                <p>O‘zingizga mos qurilmani tanlang.</p>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div class="filters">
+                <button class="filter active" data-category="all">Barchasi</button>
+                <button class="filter" data-category="laptop">💻 Noutbuklar</button>
+                <button class="filter" data-category="computer">🖥️ Kompyuterlar</button>
+            </div>
+
+            <input type="search" id="searchInput" placeholder="🔍 Model qidirish...">
+
+            <select id="sortSelect">
+                <option value="default">Saralash</option>
+                <option value="low">Arzonidan boshlab</option>
+                <option value="high">Qimmatidan boshlab</option>
+            </select>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p id="emptyMessage" class="empty-message" hidden>Hech qanday mahsulot topilmadi.</p>
+    </section>
+
+    <section class="promo" id="about">
+        <div>
+            <span class="eyebrow">TECHZONE AFZALLIKLARI</span>
+            <h2>Texnologiya — sizning yangi imkoniyatingiz.</h2>
+            <p>O‘qish, ish, dasturlash va o‘yinlar uchun mos qurilmalarni bizning katalogimizdan tanlang.</p>
+        </div>
+        <div class="benefits">
+            <div><span>🚀</span><strong>Zamonaviy modellar</strong><small>Turli ehtiyojlar uchun</small></div>
+            <div><span>💰</span><strong>Ochiq narxlar</strong><small>Narxlar mahsulot yonida</small></div>
+            <div><span>🎯</span><strong>Oson tanlov</strong><small>Qidirish va saralash</small></div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <span class="eyebrow">BIZ BILAN BOG‘LANING</span>
+        <h2>Savollaringiz bormi?</h2>
+        <p>Mahsulotlar haqida ma’lumot olish uchun biz bilan bog‘laning.</p>
+        <a class="primary-button" href="tel:+998901234567">📞 +998 90 123 45 67</a>
+        <small class="demo-note">Namuna telefon raqami — o‘zingizning raqamingizga almashtiring.</small>
+    </section>
+</main>
+
+<footer>
+    <a href="#" class="logo"><span>TECH</span>ZONE<span class="dot">.</span></a>
+    <p>© 2026 TechZone. Barcha huquqlar himoyalangan.</p>
+    <a href="#home">Yuqoriga ↑</a>
+</footer>
+
+<div class="cart-modal" id="cartModal" aria-hidden="true">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h2>🛒 Savatingiz</h2>
+            <button id="closeCart" class="close-button" aria-label="Yopish">✕</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+            <span>Jami summa:</span>
+            <strong id="cartTotal">0 so‘m</strong>
+        </div>
+        <button id="clearCart" class="clear-button">Savatni tozalash</button>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
